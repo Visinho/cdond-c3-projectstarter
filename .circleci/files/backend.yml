@@ -26,6 +26,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
+      VpcId: vpc-051b2821c3cca0f20
       SecurityGroups:
         - Ref: InstanceSecurityGroup
       KeyName: udacity # If you use another key pair name, you should change this value to match.
