@@ -7,7 +7,6 @@ Parameters:
     Type: String
   VpcId:
     Type: String
-    Description: VPC id
     Default: vpc-051b2821c3cca0f20
 
 Resources:
@@ -30,7 +29,6 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
-      VpcId: !Ref VpcId
       SecurityGroups:
         - Ref: InstanceSecurityGroup
       KeyName: udacity # If you use another key pair name, you should change this value to match.
