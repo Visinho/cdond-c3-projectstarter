@@ -5,9 +5,6 @@ Parameters:
   ID:
     Description: Unique identifier.
     Type: String
-  VpcId:
-    Type: String
-    Default: vpc-051b2821c3cca0f20
 
 Resources:
   InstanceSecurityGroup:
