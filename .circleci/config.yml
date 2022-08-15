@@ -224,7 +224,7 @@ jobs:
           name: Install dependencies
           command: |
             # Your code here
-            - install_ansible
+            - yum install_ansible
       - run:
           name: Configure server
           command: |
