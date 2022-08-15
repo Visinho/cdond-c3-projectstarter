@@ -17,8 +17,8 @@ commands:
     parameters:
       # Add parameter here
       workflow_id:
-          default: "${CIRCLE_WORKFLOW_ID:0:7}"
-          type: string
+        default: "${CIRCLE_WORKFLOW_ID:0:7}"
+        type: string
 
     steps:
       - run:
@@ -35,8 +35,8 @@ commands:
     parameters:
       # Add parameter here   
        workflow_id:
-          default: "${CIRCLE_WORKFLOW_ID:0:7}"
-          type: string
+        default: "${CIRCLE_WORKFLOW_ID:0:7}"
+        type: string
 
     steps:
       - run:
@@ -219,12 +219,8 @@ jobs:
       # attach workspace
       - attach_workspace:
           at: ~/
+      - install_ansible
       
-      - run:
-          name: Install dependencies
-          command: |
-            # Your code here
-            - yum install_ansible
       - run:
           name: Configure server
           command: |
