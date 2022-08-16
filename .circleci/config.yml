@@ -10,7 +10,7 @@ commands:
             curl -fsSL https://deb.nodesource.com/setup_13.x | sudo -E bash -
             sudo apt install -y nodejs
 
-  install_Aws CLI:
+  install_AWS CLI:
     description: Install Aws CLI
     steps:
       - run:
