@@ -294,13 +294,11 @@ jobs:
       # attach workspace
       - attach_workspace:
           at: ~/
-      - run:
-          name: Install dependencies
-          command: |
-            # your code here
-            - install_ansible
-            - install_nodejs
-            - install_awscli
+      
+      - install_ansible
+      - install_nodejs
+      - install_awscli
+      
       - run:
           name: Get backend url
           command: |
@@ -342,14 +340,11 @@ jobs:
       # attach workspace
       - attach_workspace:
           at: ~/
-      
-      - run:
-          name: Install dependencies
-          command: |
-            # your code here
-            - install_ansible
-            - install_nodejs
-            - install_awscli
+
+      - install_ansible
+      - install_nodejs
+      - install_awscli
+
       - run:
           name: Deploy backend
           command: |
