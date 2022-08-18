@@ -448,12 +448,16 @@ jobs:
 # cleanup:
 #     docker:
 #       # Docker image here
+#       - image: cimg/base:stable
 #     steps:
 #       # Checkout code from git
+#       - checkout
+#       - install_awscli
 #       - run:
 #           name: Get old stack workflow id
 #           command: |
 #             # your code here
+
 #             export OldWorkflowID="the id here"
 #             export STACKS=[] #put the list of stacks here
 #       - run:
@@ -495,5 +499,5 @@ workflows:
           requires: [deploy-backend, deploy-frontend]
       - cloudfront-update:
           requires: [smoke-test]
-#       - cleanup:
-#           requires: [cloudfront-update]
+      # - cleanup:
+      #     requires: [cloudfront-update]
