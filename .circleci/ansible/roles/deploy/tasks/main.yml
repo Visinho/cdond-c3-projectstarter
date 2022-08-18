@@ -3,16 +3,9 @@
     path: ~/backend-app
     state: directory
 
-- name: "copy zipped archive"
-  become: true
-  synchronize: 
-    src: ../../artifact.tar.gz
-    dest: /home/ubuntu/artifact.tar.gz
-    recursive: true
-
 - name: "Unarchive backend files"
   unarchive:
-    src: /home/ubuntu/artifact.tar.gz
+    src: artifact.tar.gz
     dest: ~/backend-app 
 
 - name: "Installing Node Dependencies"
